@@ -1,0 +1,124 @@
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+    * {
+        box-sizing: border-box;
+    }
+    
+     :root {
+        --hover-width: 75%;
+        --other-width: 25%;
+        --speed: 1000ms;
+    }
+    
+    body {
+        margin: 0;
+        font-family: 'Ubuntu', sans-serif;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #333;
+    }
+    
+    .btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: #fff;
+        border: #fff solid 0.15rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 13rem;
+        padding: 1.5rem;
+    }
+    
+    .split.left .btn:hover {
+        background-color: rgba(87, 84, 236, 1);
+        border-color: rgba(87, 84, 236, 1);
+    }
+    
+    .split.right .btn:hover {
+        background-color: rgba(28, 122, 28, 1);
+        border-color: rgba(28, 122, 28, 1);
+    }
+    
+    .split {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .split.right,
+    .split.left,
+    .split.right::before,
+    .split.left::before {
+        transition: all var(--speed) ease-in-out;
+    }
+    
+    .split.left {
+        left: 0;
+        background: url('./images/ps5.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .split.left::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(87, 84, 236, 0.7);
+    }
+    
+    .split.right {
+        right: 0;
+        background: url('./images/xbox.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .split.right:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(43, 43, 43, 0.8);
+    }
+    
+    .hover-left .left {
+        width: var(--hover-width);
+    }
+    
+    .hover-left .right {
+        width: var(--other-width);
+    }
+    
+    .hover-right .right {
+        width: var(--hover-width);
+    }
+    
+    .hover-right .left {
+        width: var(--other-width);
+    }
