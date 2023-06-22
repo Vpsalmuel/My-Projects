@@ -23,7 +23,7 @@ body {
 
 .container h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .container a {
@@ -69,7 +69,7 @@ body {
     padding: 10px 0;
     width: 100%;
     outline: none;
-    display: block;
+    /* display: block; */
 }
 
 .form-control label {
@@ -82,7 +82,7 @@ body {
     display: inline-block;
     font-size: 20px;
     min-width: 5px;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: 0.3s cubic-bezier(0.69, -0.55, 0.265, 1.55);
 }
 
 .form-control input:focus+label span,

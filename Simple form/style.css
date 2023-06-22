@@ -61,6 +61,10 @@ body {
     left: 0;
 }
 
+.form-control label:focus {
+    background-color: transparent;
+}
+
 .form-control input {
     border: none;
     border-bottom: 1px solid lightblue;
